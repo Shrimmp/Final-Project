@@ -16,6 +16,8 @@ WHITE = (255, 255, 255)
 BLACK = (0, 0, 0)
 GREEN = (1, 50, 34)
 FONT = pygame.font.SysFont("Arial", 36)
+TOP_BLOCK_HEIGHT = 120
+TOP_BLOCK = pygame.Rect(0, 0, SCREEN_WIDTH, TOP_BLOCK_HEIGHT)
 
 MENU = "menu"
 PLAYING = "playing"
@@ -30,6 +32,19 @@ def spawn_targets(n):
         x = random.randint(TARGET_RADIUS, SCREEN_WIDTH - TARGET_RADIUS)
         y = random.randint(TARGET_RADIUS, SCREEN_HEIGHT - TARGET_RADIUS)
         rect = pygame.Rect(x - TARGET_RADIUS, y - TARGET_RADIUS, TARGET_RADIUS * 2, TARGET_RADIUS * 2)
+
+        if rect.colliderect(TOP_BLOCK):
+            continue
+
+        overlap = False
+        for t in targets:
+            if rect.colliderect(t):
+                overlap = True
+                break
+
+        if overlap:
+            continue
+        
         targets.append(rect)
 
     return targets
