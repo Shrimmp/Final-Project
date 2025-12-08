@@ -4,8 +4,8 @@ import time
 
 pygame.init()
 
-SCREEN_WIDTH = 800
-SCREEN_HEIGHT = 600
+SCREEN_WIDTH = 1920
+SCREEN_HEIGHT = 1080
 SCREEN = pygame.display.set_mode((SCREEN_WIDTH, SCREEN_HEIGHT))
 pygame.display.set_caption("Aim Trainer")
 
@@ -64,8 +64,9 @@ def draw_button(text, rect, color):
     label_rect = label.get_rect(center = rect.center)
     SCREEN.blit(label, label_rect)
 
-start_button = pygame.Rect(SCREEN_WIDTH//2 - 100, 300, 200, 60)
-replay_button = pygame.Rect(SCREEN_WIDTH//2 - 100, 350, 200, 60)
+start_button = pygame.Rect(SCREEN_WIDTH//2 - 100, SCREEN_HEIGHT//2 - 30, 200, 60)
+replay_button = pygame.Rect(SCREEN_WIDTH//2 - 100, SCREEN_HEIGHT//2 + 50, 200, 60)
+
 
 start_time = 0
 score = 0
