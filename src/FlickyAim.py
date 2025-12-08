@@ -114,7 +114,7 @@ while running:
                     start_time = time.time()
 
     if state == MENU:
-        draw_text("FPS TRAINER", 150)
+        draw_text("Flicky Aim Trainer", 150)
         draw_button("START", start_button, GREEN)
 
     elif state == PLAYING:
