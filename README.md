@@ -4,7 +4,7 @@
 Demo Video: 
 
 ## GitHub Repository
-GitHub Repo: 
+GitHub Repo: https://github.com/Shrimmp/Final-Project
 
 ## Description
 Flicky Aim Trainer is a short game that is meant to improve your FPS gaming skills through continuous use,
